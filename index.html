@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating the keyboard code</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+        }
+        .container{
+            width:35%;
+            padding:25px;
+            background-color:white;
+            text-align: center;
+            font-size: 40px;
+            box-shadow: 0 0 25px 0 black;
+        }
+        .pressed{
+            width:35%;
+            background-color: red;
+            text-align: center;
+            font-size: 40px;
+            box-shadow: 0 0 25px 0 black;
+            display: none;
+        }
+        .codes{
+            text-align: center;
+            width:20%;
+            padding:40px;
+            background-color: yellow;
+            box-shadow: 0 0 25px 0 black;
+            font-size: 8rem;
+            margin:40px;
+        }
+        .history{
+            margin:30px;
+            width:5%;
+            padding:20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            box-shadow: 0 0 20px rgb(79, 75, 75);
+        }
+        .histories{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="sound" src="click-button-140881.mp3"></audio>
+    <div class="main">
+        <div class="container">Pressed any Keyboard Key</div>
+        <div class="pressed">
+            <span>You Pressed</span>
+            <br>
+            <span class="character"></span>
+        </div>
+        <div class="codes"></div>
+        <div class="history">History</div>
+        <div class="histories"></div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
